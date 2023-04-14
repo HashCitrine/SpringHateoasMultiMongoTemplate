@@ -1,0 +1,33 @@
+#server:
+#  port: 8080
+#  servlet:
+#    context-path: /
+#    encoding:
+#      charset: UTF-8
+#      enabled: true
+#      force: true
+
+spring:
+  data:
+    mongodb:
+      v1:
+        uri: ${datasource.v1.uri}
+      v2:
+        uri: ${datasource.v2.uri}
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+logging:
+  level:
+    web: debug
+
+login:
+  id: hateoas
+  password: mongo
+
+springdoc:
+  swagger-ui:
+    path: /api/swagger
+  cache:
+    disabled: true
+#  override-with-generic-response: false
